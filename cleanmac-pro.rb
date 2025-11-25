@@ -2,7 +2,7 @@ class CleanmacPro < Formula
   desc "Enterprise macOS disk management and optimization suite"
   homepage "https://github.com/Dan13681989/CleanMac-Pro"
   url "https://github.com/Dan13681989/CleanMac-Pro/archive/refs/tags/v2.2.1.tar.gz"
-  sha256 "PUT_THE_ACTUAL_SHA256_HERE"
+  sha256 "9af4fb06dc48275426eec6681ab8bf18ac45f85d4983685df1510c9b04d3e5b2"
   license "MIT"
 
   depends_on "ncdu"
