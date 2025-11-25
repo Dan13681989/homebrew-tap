@@ -9,15 +9,15 @@ class CleanmacPro < Formula
   depends_on "tree"
 
   def install
-    # Install all binaries
-    bin.install "bin/cleanmac-dashboard"
-    bin.install "bin/cleanmac-analyze" 
-    bin.install "bin/cleanmac-large-files"
-    bin.install "bin/cleanmac-smart-cache"
-    bin.install "bin/cleanmac-docker-clean"
-    bin.install "bin/cleanmac-enterprise"
-    bin.install "bin/cleanmac-security-scan"
-    bin.install "bin/cleanmac-clean-now"
+    # Install all main scripts from root (they should be there in the tarball)
+    bin.install "cleanmac-dashboard"
+    bin.install "cleanmac-analyze"
+    bin.install "cleanmac-large-files"
+    bin.install "cleanmac-smart-cache"
+    bin.install "cleanmac-docker-clean"
+    bin.install "cleanmac-enterprise"
+    bin.install "cleanmac-security-scan"
+    bin.install "cleanmac-clean-now"
   end
 
   test do
