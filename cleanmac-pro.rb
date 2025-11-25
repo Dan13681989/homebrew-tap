@@ -1,8 +1,8 @@
 class CleanmacPro < Formula
   desc "Enterprise macOS disk management and optimization suite"
   homepage "https://github.com/Dan13681989/CleanMac-Pro"
-  url "https://github.com/Dan13681989/CleanMac-Pro/archive/refs/tags/v2.2.1.tar.gz"
-  sha256 "9af4fb06dc48275426eec6681ab8bf18ac45f85d4983685df1510c9b04d3e5b2"
+  url "https://github.com/Dan13681989/CleanMac-Pro/archive/refs/tags/v2.2.2.tar.gz"
+  sha256 "REPLACE_WITH_ACTUAL_SHA256"
   license "MIT"
 
   depends_on "ncdu"
@@ -12,7 +12,7 @@ class CleanmacPro < Formula
     # Install all main scripts from root
     bin.install "cleanmac-dashboard"
     bin.install "cleanmac-analyze"
-    bin.install "cleanmac-large-files" 
+    bin.install "cleanmac-large-files"
     bin.install "cleanmac-smart-cache"
     bin.install "cleanmac-docker-clean"
     bin.install "cleanmac-enterprise"
