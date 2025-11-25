@@ -1,36 +1,19 @@
 class CleanmacPro < Formula
-  desc "Professional macOS management and optimization suite"
+  desc "Enterprise macOS disk management and optimization suite"
   homepage "https://github.com/Dan13681989/CleanMac-Pro"
-  url "https://github.com/Dan13681989/CleanMac-Pro/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "auto-generated"
+  url "https://github.com/Dan13681989/CleanMac-Pro/archive/refs/tags/v2.2.0.tar.gz"
+  sha256 "6aad5f823a326c91362c89d2bf2783947ed82a70820660a745d18b31bff9e688"
   license "MIT"
-  
-  depends_on :macos
-  
+
+  depends_on "ncdu"
+  depends_on "tree"
+
   def install
-    bin.install "cleanmac-dashboard"
-    bin.install "enterprise-features/cleanmac-enterprise-control.sh" => "cleanmac-enterprise"
-    bin.install "install-commands.sh" => "cleanmac-install"
-    
-    # Make executable
-    chmod 0755, bin/"cleanmac-dashboard"
-    chmod 0755, bin/"cleanmac-enterprise"
-    chmod 0755, bin/"cleanmac-install"
+    bin.install Dir["bin/*"]
+    prefix.install "lib", "docs", "tests"
   end
-  
+
   test do
-    system "#{bin}/cleanmac-dashboard"
-  end
-  
-  def caveats
-    <<~EOS
-      🎉 CleanMac Pro Enterprise installed!
-      
-      Quick Start:
-        cleanmac-enterprise    # Launch control panel
-        cleanmac-dashboard     # View system status
-        
-      Documentation: https://github.com/Dan13681989/CleanMac-Pro
-    EOS
+    system "#{bin}/cleanmac-dashboard", "--help"
   end
 end
